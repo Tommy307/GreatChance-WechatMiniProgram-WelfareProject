@@ -1,0 +1,25 @@
+/* miniprogram/pages/createShares/createShares.wxss */
+
+.selection{
+  display: inline-block;margin-left:25rpx;color:rgb(255, 196, 4);
+  width: 600rpx;
+}
+
+.topics{
+  margin-left: 125rpx;
+  margin-right: 25rpx;
+}
+
+.topic{
+  margin-top: 10rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  color: #777;
+  background-color: rgba(238, 238, 238, 0.11);
+  /* border-right: 7rpx solid rgb(223, 223, 223); */
+  border-bottom: 3rpx solid rgba(223, 223, 223, 0.24);
+}
+
+.shareInfoContainer{
+  margin-top: 10rpx;
+}

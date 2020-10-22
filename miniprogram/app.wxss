@@ -1,0 +1,411 @@
+/**app.wxss**/
+.topBar{
+  width: 100%;
+  height: 70rpx;
+  margin-top: 50rpx;
+  line-height: 70rpx;
+  position: fixed;
+  display: flew;
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.topBarText{
+  width: 160rpx;
+	height: 70rpx;
+	font-family: PingFang SC;
+	font-weight: 600;
+	font-stretch: normal;
+	line-height: 70rpx;
+	letter-spacing: 0rpx;
+	color: #2c2c2c;
+}
+
+.returnIcon{
+  width:40rpx;
+  height: 40rpx;
+  position: fixed;
+  top:66rpx;
+  left:32rpx;
+}
+
+/* 小一点的的hhh */
+.xiaojiantouIcon{
+  width:40rpx;
+  height: 40rpx;
+  display: inline-block;
+  position: absolute;
+  margin: 15rpx 0;
+  right: 10rpx;
+}
+
+.smallIcon{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 10rpx 10rpx;
+}
+
+.mediumIcon{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 10rpx 10rpx;
+}
+
+/* 头部 */
+.head {
+  width: 100%;
+  position: fixed;
+  top:135rpx;
+  left: 0;
+  height: 70rpx;
+  line-height: 70rpx;
+  display: inline-block;
+  text-align: center;
+}
+
+.headText{
+  color: #555;
+  line-height: 50rpx;
+  font-size: medium;
+  font-weight: 800;
+}
+
+/* 用于分区的文字部分 */
+.divideText {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: inline-block;
+  position: relative;
+  border-bottom: 9rpx solid #ccc;
+  /* 抵消head里面的line-height */
+  line-height: normal;
+  color:#999;
+}
+
+.scroll-body{
+  margin-top:210rpx;
+  height: 1025rpx;
+  width: 100%;
+}
+
+.body{
+  margin-top:135rpx;
+}
+
+.foot{
+  position: fixed;
+  width: 100%;
+  bottom: -12rpx;
+  /* background-color: rgba(255, 255, 255, 0.534); */
+}
+
+.footContainer{
+  width: 33.333%;
+  display: inline-block;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.footImg{
+  width: 55rpx;
+  height: 50rpx;
+  margin: 0 auto;
+}
+
+.footText{
+  position: relative;
+  top: -14rpx;
+  font-size: 24rpx;
+  color: #555;
+  font-weight: 500;
+  margin:0 auto;
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+  height: 90rpx;
+  line-height: 90rpx;
+  /* margin-top: 10rpx; */
+  vertical-align: middle;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+} 
+
+/* 单行 */
+.line-container{
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  /* background-color: blanchedalmond; */
+  /* border: 1rpx solid grey; */
+}
+
+/* 仅上方有margin */
+.topLineMargin{
+  margin-top: 15rpx;
+}
+
+/* 带阴影 */
+.line-box{
+  /* box-shadow: 0 3px rgba(0, 0, 0, 0.1); */
+}
+
+/* 配件1 */
+.textInput-input{
+  display: inline-block;
+  position: relative;
+  width:500rpx;
+  top:10rpx;
+  margin-left: 25rpx;
+}
+
+/* 上传图片的容器 */
+.image-container{
+  width:180rpx;
+  height:180rpx;
+  margin: 15rpx 10rpx;
+  border-radius: 18rpx;
+  display: inline-block;
+}
+
+/* 用户信息栏 */
+.userInfoContainer{
+  width: 100%;
+  height:100rpx;
+  line-height:100rpx;
+  vertical-align: center;
+}
+
+.userAvatar{
+  width:86rpx;
+  height: 86rpx;
+  margin: 10rpx 20rpx;
+  display: inline-block;
+  border-radius: 100%;
+}
+
+.userName{
+  font-weight: 400;
+  font-size: 28rpx;
+  display: inline-block;
+  position: relative;
+  top: 40rpx;
+  color: #333;
+  margin-left: 10rpx;
+}
+
+/* 评论输入 */
+.inputComment-contianer{
+  position: fixed;
+  bottom: 10rpx;
+  width: 100%;
+}
+
+/* 必填项 */
+.necessary::after{
+  content: "*";
+  color: red;
+}
+
+.pickerText{
+  color: grey;
+}
+
+.selection{
+  color: grey;
+}
+
+.selection_title{
+  color: black;
+}
+
+textarea{
+  margin-top: 5rpx;
+  overflow: hidden;
+}
+
+.counter{
+  color:rgba(0, 0, 0, 0.3);
+  text-align:right;
+  font-size:35rpx;
+  margin-right: 52rpx;
+} 
+
+button {
+  background: #009999;
+  color:white;
+  width: 100%;
+  display: table;
+  margin: 25rpx auto;
+}
+
+.normalButton{
+  width:72%;
+  display: block;
+  margin-top: 25rpx;
+}
+
+.smallButton{
+  width: 51%;
+}
+
+.tinyButton{
+  width: 25%;
+  display: inline-block;
+  position: relative;
+}
+
+button:focus{
+  outline: 0;
+}
+
+button::after{
+  border: none;
+}
+
+button text{
+  vertical-align:middle;
+}
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.userinfo, .uploader, .tunnel {
+  margin-top: 40rpx;
+  height: 140rpx;
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+
+.userinfo-avatar:after {
+  border: none;
+}
+
+.userinfo-nickname {
+  font-size: 32rpx;
+  color: #007aff;
+  background-color: white;
+  background-size: cover;
+}
+
+.userinfo-nickname::after {
+  border: none;
+}
+
+.uploader, .tunnel {
+  height: auto;
+  padding: 0 0 0 40rpx;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.uploader-text, .tunnel-text {
+  width: 100%;
+  line-height: 52px;
+  font-size: 34rpx;
+  color: #007aff;
+}
+
+.uploader-container {
+  width: 100%;
+  height: 400rpx;
+  padding: 20rpx 20rpx 20rpx 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.uploader-image {
+  width: 100%;
+  height: 360rpx;
+}
+
+.tunnel {
+  padding: 0 0 0 40rpx;
+}
+
+.tunnel-text {
+  position: relative;
+  color: #222;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tunnel-text:first-child {
+  border-top: none;
+}
+
+.tunnel-switch {
+  position: absolute;
+  right: 20rpx;
+  top: -2rpx;
+}
+
+.disable {
+  color: #888;
+}
+
+.service {
+  position: fixed;
+  right: 40rpx;
+  bottom: 40rpx;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  background: linear-gradient(#007aff, #0063ce);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  transition: all 300ms ease;
+}
+
+.service-button {
+  position: absolute;
+  top: 40rpx;
+}
+
+.service:active {
+  box-shadow: none;
+}
+
+.request-text {
+  padding: 20rpx 0;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  word-break: break-all;
+}

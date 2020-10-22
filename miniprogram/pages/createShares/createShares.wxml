@@ -1,0 +1,49 @@
+<!--miniprogram/pages/createShares/createShares.wxml-->
+<view class="topBar">
+	<image class="returnIcon" src="../../images/fanhui.png" bindtap="onTapReturn"></image>
+	<text class="headText" style="margin:auto auto;display:inline-block">资讯发布</text>
+</view>
+
+<view class="body">
+	<form bindsubmit="shareFormSubmit">
+
+		<view class="line-container" bindtap="onTapPicker">
+			<text style="margin-left:52rpx">话题</text>
+			<!-- <picker class="selection" bindchange="onPickerChange" value="{{topicIndexValue}}" range="{{shareTopics}}">#{{currentTopic}}#</picker> -->
+			<view class="selection">#{{currentTopic}}#</view>
+			<image class="xiaojiantouIcon" src="{{pickerImg}}"></image>
+		</view>
+
+		<!-- Topics -->
+		<view class="topics" style="display:{{disTopics}}">
+			<view wx:for="{{shareTopics}}">
+				<view class="topic" bindtap="onChooseTopic" data-topic="{{item}}">#{{item}}#</view>
+			</view>
+		</view>
+
+		<view class="line-container boxLine-container">
+			<text style="margin-left:52rpx">标题</text>
+			<input class="textInput-input" type="text" placeholder="0~15" maxlength="15" bindinput="subjectInputChange"></input>
+		</view>
+
+		<view class="topLineMargin" style="margin-left:52rpx">
+			<text class="necessary">正文</text>
+			<textarea bindinput="textAreaChange" style="height:500rpx;width:650rpx" placeholder="{{contentToast}}" placeholder-style="color:{{contentToastColor}}" maxlength="1500"></textarea>
+			<view class="counter">
+				<span>{{countShareInformationWords}}</span>/1500
+			</view>
+		</view>
+
+		<view class="topLineMargin" style="margin-left:52rpx;">
+			<text style="display:block;">配图</text>
+			<image class="image-container" src="{{zixunImages[0]}}" data-n="0" bindlongtap="onLongTapImg" bindtap="onTapImg"></image>
+			<image class="image-container" src="{{zixunImages[1]}}" data-n="1" bindlongtap="onLongTapImg" bindtap="onTapImg"></image>
+			<image class="image-container" src="{{zixunImages[2]}}" data-n="2" bindlongtap="onLongTapImg" bindtap="onTapImg"></image>
+			<view class="counter">
+				<span>{{imagesCount}}</span>/3
+			</view>
+		</view>
+
+		<button form-type="submit" class="normalButton">提交</button>
+	</form>
+</view>

@@ -1,0 +1,30 @@
+<!--miniprogram/pages/createShares/createShares.wxml-->
+<view class="topBar">
+	<image class="returnIcon" src="../../images/fanhui.png" bindtap="onTapReturn"></image>
+	<text class="headText" style="margin:auto auto;display:inline-block">用户认证</text>
+</view>
+
+<view class="body">
+	<form bindsubmit="shareFormSubmit">
+
+		<view style="margin-left:52rpx;">
+			<label class="necessary">是否在读</label>
+			<radio-group class="radio-group" bindchange="radioChange">
+					<radio value="在读" style="display:block;">在读</radio>
+					<radio value="校友"/>校友
+			</radio-group>
+		</view>
+
+		<view class="line-container">
+			<text class="necessary" style="margin-left:52rpx">学校名称</text>
+			<input class="textInput-input" type="text" placeholder="0~15" maxlength="15" bindinput="inputSchoolName"></input>
+		</view>
+		
+		<view class="topLineMargin" style="margin-left:52rpx;">
+			<text class="necessary" style="display:block;">学信网姓名编号截图</text>
+			<image class="image-container" src="{{img}}" data-n="0" bindlongtap="onLongTapImg" bindtap="onTapImg"></image>
+		</view>
+
+		<button form-type="submit" class="normalButton">提交</button>
+	</form>
+</view>

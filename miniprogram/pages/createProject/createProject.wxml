@@ -1,0 +1,89 @@
+<!--pages/createProject/createProject.wxml-->
+<view class="topBar">
+	<image class="returnIcon" src="../../images/fanhui.png" bindtap="onUnload"></image>
+	<text class="topBarText">项目发布</text>
+</view>
+
+<scroll-view class="scroll-body" style="margin-top:135rpx;height:1180rpx;" scroll-y="true">
+	<form bindsubmit="projectFormSubmit">
+
+		<!-- 类型选择 -->
+		<view class="line-box">
+			<view class="line-container">
+				<label class="necessary" style="margin-left:52rpx;display:inline-block;">类型</label>
+				<picker class="selection" bindchange="bindPickerChange" range="{{labelArray}}" style="color:{{labelColor}}">
+					{{projectLabel}}
+				</picker>
+			</view>
+			<!-- 需要线下证明吗 -->
+			<text style="color:#ccc;display:{{disLabelvHour}};margin-left:153rpx;">该类项目的公益时为{{vHour}}</text>
+			<view style="display:{{disLabelvHour}};margin-left:52rpx;">
+				<checkbox class="line-container" bindtap="onCheckVHour">是否需要线下公益时证明</checkbox>
+				<view style="display:{{disInputEmail}};margin:15rpx 0;">
+					<label class="necessary line-container">邮箱</label>
+					<input class="textInput-input" placeholder="请输入邮箱，便于工作人员联系" bindinput="onInputEmail"></input>
+				</view>
+			</view>
+		</view>
+
+		<view class="line-container">
+			<label class="necessary" style="margin-left:52rpx;display:inline-block;">名称</label>
+			<input class="textInput-input" placeholder="请输入项目名称" name="projectName" bindinput="onInputProjectName"></input>
+		</view>
+
+		<view class="line-container">
+			<label class="necessary" style="margin-left:52rpx;">起止时间</label>
+			<picker style="margin-left:25rpx;margin-right:15rpx;display:inline-block;" mode="date" field="year" value="{{date}}" bindchange="bindStartDateChange">
+				<text class="date">{{startDate}}</text>
+			</picker>
+			<text style="margin-left:15rpx;margin-right:15rpx;">~</text>
+			<picker style="margin:0 15rpx;display:inline-block;" mode="date" field="year" value="{{date}}" bindchange="bindEndDateChange">
+				<text class="date">{{endDate}}</text>
+			</picker>
+		</view>
+
+		<view class="line-container">
+			<label class="necessary" style="margin-left:52rpx;">队友数目</label>
+			<input class="textInput-input" type="number" placeholder="0则为单人组队" bindinput="memberNumInputChange"></input>
+		</view>
+
+		<view class="topLineMargin" style="margin-left:52rpx;">
+			<label class="necessary" style="display:block;">简介</label>
+			<textarea bindinput="textAreaChange" style="height:250rpx;width:650rpx;" placeholder="请输入1~120 字的项目简介" row="3" maxlength="120"></textarea>
+			<view class="counter">
+				<span>{{countProjectInformationWords}}</span>/120
+			</view>
+		</view>
+
+		<view class="topLineMargin" style="margin-left:52rpx;">
+			<label class="necessary" style="display:block;">正文</label>
+			<textarea bindinput="CtextAreaChange" style="height:400rpx;width:650rpx;" placeholder="请输入1~1500 字的项目正文" row="5" maxlength="1500"></textarea>
+			<view class="counter">
+				<span>{{countProjectContentWords}}</span>/1500
+			</view>
+		</view>
+
+		<view class="topLineMargin" style="margin-left:52rpx;">
+			<label style="display:block;">封面<text style="color:#ccc">(默认将使用谷仓提供的统一项目封面)</text></label>
+			<image class="image-container" src="{{coverImage}}" bindtap="onTapCoverImg" bindlongtap="onLongTapCoverImg"></image>
+		</view>
+
+		<view class="topLineMargin" style="margin-left:52rpx;">
+			<label style="display:block;">配图</label>
+			<image class="image-container" src="{{projectImages[0]}}" data-n="0" bindlongtap="onLongTapImg" bindtap="onTapImg" style="display:{{disImg[0]}}"></image>
+			<image class="image-container" src="{{projectImages[1]}}" data-n="1" bindlongtap="onLongTapImg" bindtap="onTapImg" style="display:{{disImg[0]}}"></image>
+			<image class="image-container" src="{{projectImages[2]}}" data-n="2" bindlongtap="onLongTapImg" bindtap="onTapImg" style="display:{{disImg[0]}}"></image>
+			<image class="image-container" src="{{projectImages[3]}}" data-n="3" bindlongtap="onLongTapImg" bindtap="onTapImg" style="display:{{disImg[1]}}"></image>
+			<image class="image-container" src="{{projectImages[4]}}" data-n="4" bindlongtap="onLongTapImg" bindtap="onTapImg" style="display:{{disImg[1]}}"></image>
+			<image class="image-container" src="{{projectImages[5]}}" data-n="5" bindlongtap="onLongTapImg" bindtap="onTapImg" style="display:{{disImg[1]}}"></image>
+			<image class="image-container" src="{{projectImages[6]}}" data-n="6" bindlongtap="onLongTapImg" bindtap="onTapImg" style="display:{{disImg[2]}}"></image>
+			<image class="image-container" src="{{projectImages[7]}}" data-n="7" bindlongtap="onLongTapImg" bindtap="onTapImg" style="display:{{disImg[2]}}"></image>
+			<image class="image-container" src="{{projectImages[8]}}" data-n="8" bindlongtap="onLongTapImg" bindtap="onTapImg" style="display:{{disImg[2]}}"></image>
+			<view class="counter">
+				<span>{{imagesCount}}</span>/9
+			</view>
+		</view>
+
+		<button form-type="submit" class="normalButton">提交</button>
+	</form>
+</scroll-view>

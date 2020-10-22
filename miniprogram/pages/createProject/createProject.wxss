@@ -1,0 +1,14 @@
+/* pages/createProject/createProject.wxss */
+
+.selection{
+  display: inline-block;
+  margin-left:25rpx;
+  color:rgb(255, 196, 4);
+  width: 580rpx;
+}
+
+.date{
+  color: #777;
+  font-weight: 530;
+  font-family: sans-serif;
+}
